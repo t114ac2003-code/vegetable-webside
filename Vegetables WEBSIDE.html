@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0138)file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/Vegetables_files/Vegetables.html -->
+<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetables</title>
+  <!-- Google Font: Noto Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Vegetables WEBSIDE_files/css2" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="./Vegetables WEBSIDE_files/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #778A50;
+      --bg-color: #EDF2C5;
+      --content-text: #7D7D7D;
+      --content-bg: #F7FBDA;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: 'Noto Sans', sans-serif;
+      color: var(--content-text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 20px 40px;
+      flex: 1;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 12px;
+    }
+
+    .logo {
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .social-btn {
+      width: 22px;
+      height: 22px;
+      background-color: var(--primary);
+      color: var(--bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 12px;
+      border-radius: 2px;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .auth-btn {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: 'Noto Sans', sans-serif;
+      text-decoration: none;
+      border-radius: 2px;
+      line-height: 1.2;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: var(--primary);
+      padding: 0 16px;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      display: block;
+      padding: 10px 0;
+    }
+
+    /* Main Banner Image */
+    .banner {
+      width: 100%;
+      margin-bottom: 24px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    /* Grid Layout for Bottom Section */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card-title {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      padding: 8px 16px;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+
+    /* Left Side: Vegetables Images */
+    .vegetables-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+    }
+
+    /* Right Side: Contact Box */
+    .contact-box {
+      background-color: var(--content-bg);
+      padding: 16px;
+      font-size: 12px;
+      line-height: 18px;
+      color: var(--content-text);
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    .contact-text {
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(125, 125, 125, 0.3);
+      margin: 12px 0;
+    }
+
+    .contact-info p {
+      margin-bottom: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: #ffffff;
+      text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 12px 20px;
+      margin-top: auto;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .header-right {
+        align-self: flex-end;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- Header -->
+    <header>
+      <div class="logo">Vegetables</div>
+      <div class="header-right">
+        <div class="social-icons">
+  <a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/Vegetables.html#" class="social-btn">
+    <img src="./Vegetables WEBSIDE_files/btn_facebook.png" alt="Facebook">
+  </a>
+  <a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/Vegetables.html#" class="social-btn">
+    <img src="./Vegetables WEBSIDE_files/btn_instagram.png" alt="Instagram">
+  </a>
+</div>
+        <div class="auth-buttons">
+          <a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/gemini-code-1792516576913.html#" class="auth-btn">LOGIN</a>
+          <a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/gemini-code-1792516576913.html#" class="auth-btn">JOIN</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/gemini-code-1792516576913.html#">Home</a></li>
+        <li><a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/gemini-code-1792516576913.html#">About Us</a></li>
+        <li><a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/gemini-code-1792516576913.html#">Vegetables</a></li>
+        <li><a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/gemini-code-1792516576913.html#">Online</a></li>
+        <li><a href="file:///C:/%E6%88%91%E7%9A%84%E6%AA%94%E6%A1%88/%E5%A4%A7%E4%BA%8C/%E5%89%8D%E7%AB%AF/vegetable%20webside/gemini-code-1792516576913.html#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Banner Image -->
+    <div class="banner">
+      <img src="./Vegetables WEBSIDE_files/img_main_pumpkin.png" alt="Vegetables Main Banner">
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-grid">
+      <!-- Left Column: Vegetables -->
+      <div class="vegetables-section">
+        <div class="card-title">Vegetables</div>
+        <div class="vegetables-gallery">
+          <div class="gallery-item">
+            <img src="./Vegetables WEBSIDE_files/img_vegetables_carrot.png" alt="Carrot">
+          </div>
+          <div class="gallery-item">
+            <img src="./Vegetables WEBSIDE_files/img_vegetables_corn.png" alt="Corn">
+          </div>
+          <div class="gallery-item">
+            <img src="./Vegetables WEBSIDE_files/img_vegetables_pepper.png" alt="Pepper">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Contact -->
+      <div class="contact-section">
+        <div class="card-title">Contact</div>
+        <div class="contact-box">
+          <p class="contact-text">
+            For any questions or suggestions about Vegetables, Vegetables Club or your online order you can contact Vegetables Customer Service by phone, email or post and we'll be happy to help.
+          </p>
+          <hr class="divider">
+          <div class="contact-info">
+            <p>E-mail : Vegetables@aaabbccc.com</p>
+            <p>PHONE : +886-123-456-789</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Copyrights 2017 Vegetables cise / Design by Vegetables
+  </footer>
+
+
+</body></html>
